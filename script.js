@@ -41,7 +41,7 @@ async function tofindplace_id(latitude,longitude){
 // ---to get lat and long using country code---
 async function togetlatlon(city){
     try{
-        let data = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=5&appid=08e6b5e6ea5d855483579e69e693c7a4`)
+        let data = await fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=5&appid=08e6b5e6ea5d855483579e69e693c7a4`)
         let arr = await data.json();
         let latitude = arr[0].lat;
         let longitude = arr[0].lon;
